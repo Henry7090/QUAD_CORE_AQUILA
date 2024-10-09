@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="645"></ZoomStartTime>
+      <ZoomEndTime time="656"></ZoomEndTime>
+      <Cursor1Time time="646"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="532"></NameColumnWidth>
+      <ValueColumnWidth column_width="385"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/m_data_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/m_data_i[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_data_i[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/p_addr_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/p_addr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p_addr_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/p_data_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/p_data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p_data_o[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/m_i_dram">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/m_i_dram[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_i_dram[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/M_IMEM_addr_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/M_IMEM_addr_o[31:4]</obj_property>
+      <obj_property name="ObjectShortName">M_IMEM_addr_o[31:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="genblk1[0].Aquila_SoC/M_IMEM_done_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/M_IMEM_done_i</obj_property>
+      <obj_property name="ObjectShortName">M_IMEM_done_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="genblk1[0].Aquila_SoC/M_IMEM_strobe_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/M_IMEM_strobe_o</obj_property>
+      <obj_property name="ObjectShortName">M_IMEM_strobe_o</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/m_data_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/m_data_i[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_data_i[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/p_addr_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/p_addr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p_addr_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/p_data_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/p_data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p_data_o[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/M_IMEM_addr_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/M_IMEM_addr_o[31:4]</obj_property>
+      <obj_property name="ObjectShortName">M_IMEM_addr_o[31:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/m_i_dram">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/m_i_dram[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_i_dram[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[1].Aquila_SoC/m_i_dram">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[1].Aquila_SoC/m_i_dram[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_i_dram[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/m_data_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/m_data_i[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_data_i[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/p_addr_i">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/p_addr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p_addr_i[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/I_Cache/p_data_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/I_Cache/p_data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p_data_o[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/M_IMEM_addr_o">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/M_IMEM_addr_o[31:4]</obj_property>
+      <obj_property name="ObjectShortName">M_IMEM_addr_o[31:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[0].Aquila_SoC/m_i_dram">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[0].Aquila_SoC/m_i_dram[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_i_dram[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="genblk1[1].Aquila_SoC/m_i_dram">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">genblk1[1].Aquila_SoC/m_i_dram[127:0]</obj_property>
+      <obj_property name="ObjectShortName">m_i_dram[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

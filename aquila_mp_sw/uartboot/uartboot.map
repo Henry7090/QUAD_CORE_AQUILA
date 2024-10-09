@@ -1,0 +1,99 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+code_ram         0x00000000         0x00002000         xr!rw
+data_ram         0x00002000         0x00001000         rw!x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000300                        __stack_size = 0x300
+
+.text           0x00000000      0x710
+ boot.o(.text)
+ .text          0x00000000       0x34 boot.o
+                0x00000000                boot
+ *(.text)
+ .text          0x00000034      0x1cc uartboot.o
+                0x0000006c                load_elf
+ .text          0x00000200      0x510 io_uart.o
+                0x00000200                exit
+                0x00000244                inbyte
+                0x0000026c                outbyte
+                0x000002b0                getchar
+                0x000002d8                putchar
+                0x00000324                putd
+                0x000003ec                putx
+                0x0000047c                puts
+                0x00000500                printf
+
+.text.startup   0x00000710      0x1c8
+ .text.startup  0x00000710      0x1c8 uartboot.o
+                0x00000710                main
+
+.rela.dyn       0x000008d8        0x0
+ .rela.sdata    0x000008d8        0x0 boot.o
+
+.data           0x00002000      0x341
+ *(.data)
+ .data          0x00002000        0x0 boot.o
+ .data          0x00002000        0x0 uartboot.o
+ .data          0x00002000        0x0 io_uart.o
+ *(.bss)
+ .bss           0x00002000        0x0 boot.o
+ .bss           0x00002000       0xc0 uartboot.o
+                0x00002000                pheader
+                0x00002080                eheader
+ .bss           0x000020c0        0x0 io_uart.o
+ *(.rodata*)
+ .rodata        0x000020c0      0x1c7 uartboot.o
+ *fill*         0x00002287        0x1 
+ .rodata        0x00002288       0xb9 io_uart.o
+
+.sdata          0x00002344       0x24
+ .sdata         0x00002344        0x4 boot.o
+                0x00002344                stack_top
+ .sdata         0x00002348       0x14 uartboot.o
+                0x00002348                year
+                0x0000234c                organization
+                0x00002350                done_1
+                0x00002354                done_0
+                0x00002358                print_lock
+ .sdata         0x0000235c        0xc io_uart.o
+                0x0000235c                uart_status
+                0x00002360                uart_txfifo
+                0x00002364                uart_rxfifo
+
+.sbss           0x00002368        0xc
+ .sbss          0x00002368        0x4 boot.o
+                0x00002368                sp_store
+ .sbss          0x0000236c        0x8 uartboot.o
+                0x0000236c                prog_2
+                0x00002370                prog_1
+
+.stack          0x00002380      0x300
+                0x00002680                        . = (. + __stack_size)
+ *fill*         0x00002380      0x300 
+                0x00002680                        __stack_top = .
+LOAD boot.o
+LOAD uartboot.o
+LOAD io_uart.o
+OUTPUT(uartboot.elf elf32-littleriscv)
+
+.comment        0x00000000       0x1b
+ .comment       0x00000000       0x1b boot.o
+                                 0x1c (size before relaxing)
+ .comment       0x0000001b       0x1c uartboot.o
+ .comment       0x0000001b       0x1c io_uart.o
+
+.riscv.attributes
+                0x00000000       0x5b
+ .riscv.attributes
+                0x00000000       0x57 boot.o
+ .riscv.attributes
+                0x00000057       0x5b uartboot.o
+ .riscv.attributes
+                0x000000b2       0x57 io_uart.o

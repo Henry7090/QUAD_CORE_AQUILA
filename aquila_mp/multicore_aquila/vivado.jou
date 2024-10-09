@@ -1,0 +1,173 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Oct  5 09:27:13 2024
+# Process ID: 4239
+# Current directory: /home/henry7090/Desktop/Project/aquila_mp/multicore_aquila
+# Command line: vivado multicore_aquila.xpr
+# Log file: /home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/vivado.log
+# Journal file: /home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/vivado.jou
+# Running On        :henry7090-ROG-Zephyrus-G16
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.1 LTS
+# Processor Detail  :Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency     :1982.682 MHz
+# CPU Physical cores:16
+# CPU Logical cores :22
+# Host memory       :33223 MB
+# Swap memory       :8589 MB
+# Total Virtual     :41813 MB
+# Available Virtual :39676 MB
+#-----------------------------------------------------------
+start_gui
+open_project multicore_aquila.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+launch_simulation
+source soc_tb.tcl
+run all
+run all
+run all
+relaunch_sim
+run all
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/henry7090/Desktop/soc_tb_behav.wcfg
+set_property xsim.view /home/henry7090/Desktop/soc_tb_behav.wcfg [get_filesets sim_1]
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+save_wave_config {/home/henry7090/Desktop/soc_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+run all
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {genblk1[0].Aquila_SoC/I_Cache/m_data_i} {genblk1[0].Aquila_SoC/I_Cache/p_addr_i} {genblk1[0].Aquila_SoC/I_Cache/p_data_o} {genblk1[0].Aquila_SoC/M_IMEM_addr_o} {genblk1[0].Aquila_SoC/m_i_dram} {genblk1[1].Aquila_SoC/m_i_dram} }
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+undo
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 11
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {genblk1[0].Aquila_SoC/I_Cache/m_data_i} {genblk1[0].Aquila_SoC/I_Cache/p_addr_i} {genblk1[0].Aquila_SoC/I_Cache/p_data_o} {genblk1[0].Aquila_SoC/M_IMEM_addr_o} {genblk1[0].Aquila_SoC/m_i_dram} {genblk1[1].Aquila_SoC/m_i_dram} }
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

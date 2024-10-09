@@ -1,0 +1,42 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl" --include "../../../../multicore_aquila.ip_user_files/ipstatic" -d "ARTY=true" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/L2cache.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/L2cache_arbiter.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/alu.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/amo_arbiter.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/aquila_top.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/atomic_unit.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/bcu.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/bpu.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/bram_dp.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/clint.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/coherence_unit.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/core_top.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/csr_file.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/dcache.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/decode.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/device_arbiter.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/distri_ram.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/distri_ram_dp.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/execute.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/fetch.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/forwarding_unit.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/icache.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/soc_rtl/mem_arbiter.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/memory.v" \
+"../../../../multicore_aquila.srcs/sim_1/imports/soc_rtl/mig_7series_sim.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/muldiv.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/pipeline_control.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/program_counter.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/reg_file.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/sram.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/sram_dp.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/soc_rtl/uart.v" \
+"../../../../multicore_aquila.srcs/sources_1/imports/src/core_rtl/writeback.v" \
+"../../../../multicore_aquila.srcs/sim_1/imports/soc_rtl/soc_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
