@@ -1,0 +1,8 @@
+# Ignore log files
+*.log
+
+# # Ignore the entire directory
+# /aquila_mp/multicore_aquila/
+
+# Ignore specific file
+aquila_mp/multicore_aquila/vivado.log
