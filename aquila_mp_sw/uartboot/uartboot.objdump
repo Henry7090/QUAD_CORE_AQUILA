@@ -545,7 +545,7 @@ Disassembly of section .text.startup:
  7ec:	080a2583          	lw	a1,128(s4)
  7f0:	464c47b7          	lui	a5,0x464c4
  7f4:	57f78793          	addi	a5,a5,1407 # 464c457f <__stack_top+0x464c1e4f>
- 7f8:	1cf58063          	beq	a1,a5,9b8 <main+0x298>
+ 7f8:	1af58863          	beq	a1,a5,9a8 <main+0x288>
  7fc:	1b898513          	addi	a0,s3,440
  800:	d11ff0ef          	jal	510 <printf>
  804:	1d098513          	addi	a0,s3,464
@@ -646,49 +646,48 @@ Disassembly of section .text.startup:
  980:	67878793          	addi	a5,a5,1656 # 5678 <__stack_top+0x2f48>
  984:	80000737          	lui	a4,0x80000
  988:	00f72023          	sw	a5,0(a4) # 80000000 <__stack_top+0x7fffd8d0>
- 98c:	0000100f          	fence.i
- 990:	000022b7          	lui	t0,0x2
- 994:	41c2a083          	lw	ra,1052(t0) # 241c <prog_2>
- 998:	21098513          	addi	a0,s3,528
- 99c:	b75ff0ef          	jal	510 <printf>
+ 98c:	21098513          	addi	a0,s3,528
+ 990:	b81ff0ef          	jal	510 <printf>
+ 994:	0000100f          	fence.i
+ 998:	000022b7          	lui	t0,0x2
+ 99c:	41c2a083          	lw	ra,1052(t0) # 241c <prog_2>
  9a0:	000080e7          	jalr	ra
- 9a4:	400aa703          	lw	a4,1024(s5)
- 9a8:	000087b7          	lui	a5,0x8
- 9ac:	76578793          	addi	a5,a5,1893 # 8765 <__stack_top+0x6035>
- 9b0:	00f72023          	sw	a5,0(a4)
- 9b4:	efdff06f          	j	8b0 <main+0x190>
- 9b8:	0b0a5683          	lhu	a3,176(s4)
- 9bc:	0aea5403          	lhu	s0,174(s4)
- 9c0:	098a2703          	lw	a4,152(s4)
- 9c4:	0a0a2783          	lw	a5,160(s4)
- 9c8:	02d40433          	mul	s0,s0,a3
- 9cc:	000024b7          	lui	s1,0x2
- 9d0:	000b8513          	mv	a0,s7
- 9d4:	42e4a023          	sw	a4,1056(s1) # 2420 <prog_1>
- 9d8:	00f40433          	add	s0,s0,a5
- 9dc:	e90ff0ef          	jal	6c <load_elf>
- 9e0:	00000593          	li	a1,0
- 9e4:	11098513          	addi	a0,s3,272
- 9e8:	b29ff0ef          	jal	510 <printf>
- 9ec:	4204a603          	lw	a2,1056(s1)
- 9f0:	00040693          	mv	a3,s0
- 9f4:	00000593          	li	a1,0
- 9f8:	13098513          	addi	a0,s3,304
- 9fc:	b15ff0ef          	jal	510 <printf>
- a00:	000a8513          	mv	a0,s5
- a04:	b0dff0ef          	jal	510 <printf>
- a08:	000017b7          	lui	a5,0x1
- a0c:	23478793          	addi	a5,a5,564 # 1234 <main+0xb14>
- a10:	00005737          	lui	a4,0x5
- a14:	800006b7          	lui	a3,0x80000
- a18:	00f6a023          	sw	a5,0(a3) # 80000000 <__stack_top+0x7fffd8d0>
- a1c:	67870713          	addi	a4,a4,1656 # 5678 <__stack_top+0x2f48>
- a20:	0006a783          	lw	a5,0(a3)
- a24:	fee79ee3          	bne	a5,a4,a20 <main+0x300>
- a28:	16c98513          	addi	a0,s3,364
- a2c:	ae5ff0ef          	jal	510 <printf>
- a30:	0000100f          	fence.i
- a34:	000022b7          	lui	t0,0x2
- a38:	4202a083          	lw	ra,1056(t0) # 2420 <prog_1>
- a3c:	000080e7          	jalr	ra
- a40:	dcdff06f          	j	80c <main+0xec>
+ 9a4:	f0dff06f          	j	8b0 <main+0x190>
+ 9a8:	0b0a5683          	lhu	a3,176(s4)
+ 9ac:	0aea5403          	lhu	s0,174(s4)
+ 9b0:	098a2703          	lw	a4,152(s4)
+ 9b4:	0a0a2783          	lw	a5,160(s4)
+ 9b8:	02d40433          	mul	s0,s0,a3
+ 9bc:	000024b7          	lui	s1,0x2
+ 9c0:	000b8513          	mv	a0,s7
+ 9c4:	42e4a023          	sw	a4,1056(s1) # 2420 <prog_1>
+ 9c8:	00f40433          	add	s0,s0,a5
+ 9cc:	ea0ff0ef          	jal	6c <load_elf>
+ 9d0:	00000593          	li	a1,0
+ 9d4:	11098513          	addi	a0,s3,272
+ 9d8:	b39ff0ef          	jal	510 <printf>
+ 9dc:	4204a603          	lw	a2,1056(s1)
+ 9e0:	00040693          	mv	a3,s0
+ 9e4:	00000593          	li	a1,0
+ 9e8:	13098513          	addi	a0,s3,304
+ 9ec:	b25ff0ef          	jal	510 <printf>
+ 9f0:	000a8513          	mv	a0,s5
+ 9f4:	b1dff0ef          	jal	510 <printf>
+ 9f8:	000017b7          	lui	a5,0x1
+ 9fc:	23478793          	addi	a5,a5,564 # 1234 <main+0xb14>
+ a00:	00005737          	lui	a4,0x5
+ a04:	800006b7          	lui	a3,0x80000
+ a08:	00f6a023          	sw	a5,0(a3) # 80000000 <__stack_top+0x7fffd8d0>
+ a0c:	67870713          	addi	a4,a4,1656 # 5678 <__stack_top+0x2f48>
+ a10:	0006a783          	lw	a5,0(a3)
+ a14:	fee79ee3          	bne	a5,a4,a10 <main+0x2f0>
+ a18:	000017b7          	lui	a5,0x1
+ a1c:	23478793          	addi	a5,a5,564 # 1234 <main+0xb14>
+ a20:	00f6a023          	sw	a5,0(a3)
+ a24:	16c98513          	addi	a0,s3,364
+ a28:	ae9ff0ef          	jal	510 <printf>
+ a2c:	0000100f          	fence.i
+ a30:	000022b7          	lui	t0,0x2
+ a34:	4202a083          	lw	ra,1056(t0) # 2420 <prog_1>
+ a38:	000080e7          	jalr	ra
+ a3c:	dd1ff06f          	j	80c <main+0xec>

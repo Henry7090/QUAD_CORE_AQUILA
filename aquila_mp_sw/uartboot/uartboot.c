@@ -169,6 +169,7 @@ int main(void)
             printf("-----------------------------------------------------------------------\n");
             *prog_ready = LOCK_0;
             while(*prog_ready != LOCK_1);
+            *prog_ready = LOCK_0;
             printf("===================== begin to run core 0 ===============================\n");
             // Call the entry point for execution.
             

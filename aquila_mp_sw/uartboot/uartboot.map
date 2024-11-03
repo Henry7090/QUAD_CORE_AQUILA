@@ -30,12 +30,12 @@ Linker script and memory map
                 0x0000048c                puts
                 0x00000510                printf
 
-.text.startup   0x00000720      0x324
- .text.startup  0x00000720      0x324 uartboot.o
+.text.startup   0x00000720      0x320
+ .text.startup  0x00000720      0x320 uartboot.o
                 0x00000720                main
 
-.rela.dyn       0x00000a44        0x0
- .rela.sdata    0x00000a44        0x0 boot.o
+.rela.dyn       0x00000a40        0x0
+ .rela.sdata    0x00000a40        0x0 boot.o
 
 .data           0x00002000      0x3f1
  *(.data)

@@ -1,0 +1,394 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Nov  2 17:59:23 2024
+# Process ID: 11368
+# Current directory: /home/henry7090/Desktop/Project/aquila_mp/multicore_aquila
+# Command line: vivado multicore_aquila.xpr
+# Log file: /home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/vivado.log
+# Journal file: /home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/vivado.jou
+# Running On        :henry7090-ROG-Zephyrus-G16
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.1 LTS
+# Processor Detail  :Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency     :2002.781 MHz
+# CPU Physical cores:16
+# CPU Logical cores :22
+# Host memory       :33223 MB
+# Swap memory       :8589 MB
+# Total Virtual     :41813 MB
+# Available Virtual :37625 MB
+#-----------------------------------------------------------
+start_gui
+open_project multicore_aquila.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 11
+wait_on_run synth_1
+launch_runs impl_1 -jobs 11
+wait_on_run impl_1
+close_design
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs synth_1 -jobs 11
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 11
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 11
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 11
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 11
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0 ]
+endgroup
+connect_debug_port u_ila_0/clk [get_nets [list Clock_Generator/inst/clk_out1 ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[0]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[1]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[2]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[3]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[4]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[5]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[6]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[7]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[8]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[9]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[10]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[11]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[12]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[13]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[14]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[15]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[16]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[17]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[18]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[19]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[20]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[21]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[22]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[23]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[24]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[25]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[26]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[27]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[28]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[29]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[30]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[0]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[1]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[2]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[3]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[4]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[5]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[6]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[7]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[8]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[9]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[10]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[11]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[12]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[13]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[14]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[15]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[16]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[17]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[18]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[19]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[20]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[21]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[22]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[23]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[24]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[25]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[26]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[27]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[28]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[29]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[30]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[0]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[1]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[2]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[3]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[4]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[5]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[6]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[7]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[8]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[9]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[10]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[11]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[12]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[13]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[14]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[15]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[16]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[17]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[18]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[19]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[20]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[21]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[22]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[23]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[24]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[25]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[26]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[27]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[28]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[29]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[30]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[0]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[1]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[2]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[3]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[4]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[5]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[6]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[7]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[8]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[9]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[10]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[11]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[12]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[13]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[14]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[15]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[16]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[17]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[18]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[19]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[20]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[21]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[22]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[23]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[24]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[25]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[26]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[27]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[28]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[29]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[30]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[31]} ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'h0000_098C [get_hw_probes {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec} -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq32'h0000_0720 [get_hw_probes {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec} -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec} -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs synth_1 -jobs 11
+wait_on_run synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0 ]
+endgroup
+connect_debug_port u_ila_0/clk [get_nets [list Clock_Generator/inst/clk_out1 ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[0]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[1]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[2]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[3]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[4]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[5]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[6]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[7]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[8]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[9]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[10]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[11]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[12]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[13]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[14]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[15]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[16]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[17]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[18]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[19]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[20]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[21]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[22]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[23]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[24]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[25]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[26]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[27]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[28]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[29]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[30]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[0]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[1]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[2]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[3]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[4]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[5]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[6]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[7]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[8]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[9]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[10]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[11]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[12]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[13]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[14]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[15]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[16]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[17]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[18]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[19]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[20]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[21]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[22]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[23]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[24]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[25]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[26]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[27]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[28]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[29]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[30]} {genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[0]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[1]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[2]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[3]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[4]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[5]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[6]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[7]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[8]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[9]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[10]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[11]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[12]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[13]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[14]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[15]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[16]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[17]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[18]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[19]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[20]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[21]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[22]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[23]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[24]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[25]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[26]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[27]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[28]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[29]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[30]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[0]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[1]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[2]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[3]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[4]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[5]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[6]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[7]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[8]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[9]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[10]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[11]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[12]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[13]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[14]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[15]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[16]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[17]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[18]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[19]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[20]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[21]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[22]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[23]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[24]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[25]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[26]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[27]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[28]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[29]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[30]} {genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[31]} ]]
+save_constraints -force
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+wait_on_run impl_1
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/henry7090/Desktop/Project/aquila_mp/multicore_aquila/multicore_aquila.runs/impl_1/soc_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_sim
+launch_simulation
+open_wave_config /home/henry7090/Desktop/soc_tb_behav.wcfg
+source soc_tb.tcl
+run all
