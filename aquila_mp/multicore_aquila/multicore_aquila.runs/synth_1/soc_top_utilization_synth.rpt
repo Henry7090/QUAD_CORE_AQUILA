@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Sat Oct  5 14:42:49 2024
+| Date         : Sat Nov  2 23:11:18 2024
 | Host         : henry7090-ROG-Zephyrus-G16 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file soc_top_utilization_synth.rpt -pb soc_top_utilization_synth.pb
 | Design       : soc_top
@@ -31,15 +31,15 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*                | 22379 |     0 |          0 |     63400 | 35.30 |
-|   LUT as Logic             | 21631 |     0 |          0 |     63400 | 34.12 |
+| Slice LUTs*                | 22342 |     0 |          0 |     63400 | 35.24 |
+|   LUT as Logic             | 21594 |     0 |          0 |     63400 | 34.06 |
 |   LUT as Memory            |   748 |     0 |          0 |     19000 |  3.94 |
 |     LUT as Distributed RAM |   748 |     0 |            |           |       |
 |     LUT as Shift Register  |     0 |     0 |            |           |       |
-| Slice Registers            | 13154 |     0 |          0 |    126800 | 10.37 |
-|   Register as Flip Flop    | 13132 |     0 |          0 |    126800 | 10.36 |
+| Slice Registers            | 13162 |     0 |          0 |    126800 | 10.38 |
+|   Register as Flip Flop    | 13140 |     0 |          0 |    126800 | 10.36 |
 |   Register as Latch        |    22 |     0 |          0 |    126800 |  0.02 |
-| F7 Muxes                   |   947 |     0 |          0 |     31700 |  2.99 |
+| F7 Muxes                   |   971 |     0 |          0 |     31700 |  3.06 |
 | F8 Muxes                   |   400 |     0 |          0 |     15850 |  2.52 |
 +----------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -62,7 +62,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 22    |          Yes |           - |        Reset |
 | 55    |          Yes |         Set |            - |
-| 13077 |          Yes |       Reset |            - |
+| 13085 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,16 +153,16 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| FDRE     | 13077 |        Flop & Latch |
-| LUT6     | 10745 |                 LUT |
-| LUT4     |  4100 |                 LUT |
-| LUT5     |  4097 |                 LUT |
-| LUT3     |  3288 |                 LUT |
-| LUT2     |  1996 |                 LUT |
-| MUXF7    |   947 |               MuxFx |
+| FDRE     | 13085 |        Flop & Latch |
+| LUT6     | 10532 |                 LUT |
+| LUT4     |  4211 |                 LUT |
+| LUT5     |  4139 |                 LUT |
+| LUT3     |  3316 |                 LUT |
+| LUT2     |  1998 |                 LUT |
+| MUXF7    |   971 |               MuxFx |
 | RAMD64E  |   748 |  Distributed Memory |
 | CARRY4   |   532 |          CarryLogic |
-| LUT1     |   510 |                 LUT |
+| LUT1     |   511 |                 LUT |
 | MUXF8    |   400 |               MuxFx |
 | RAMB36E1 |   108 |        Block Memory |
 | FDSE     |    55 |        Flop & Latch |

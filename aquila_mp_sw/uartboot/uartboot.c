@@ -73,7 +73,6 @@ unsigned int print_lock = 0x80000004U;
 volatile unsigned int *done_0 = (unsigned int *)0x80000008U;
 volatile unsigned int *done_1 = (unsigned int *)0x8000000cU;
 
-
 static void setLock(void) {
     asm volatile ("lui t0, %hi(print_lock)");
     asm volatile ("lw t2, %lo(print_lock)(t0)");
@@ -159,111 +158,81 @@ int main(void)
         for (idx = 0; idx < hsize; idx++)
         {
             eheader[idx] = inbyte();
-            // acquire();
-            // printf("Received byte %d: 0x%X\n", idx, eheader[idx]);
-            // release();
-            //modify
-            // printf("Received byte %d: 0x%X\n", idx, eheader[idx]);
         }
         if (*((uint32_t *) ehdr->e_ident) == *magic)
         {
             prog_1 = (uint8_t *) ehdr->e_entry; // set program entry point
             size = ehdr->e_shoff + (ehdr->e_shentsize * ehdr->e_shnum);
             load_elf(ehdr);
-            acquire();
             printf("[Aquila core %d] Load Done!\n", hart_id);          
             printf("[Aquila core %d] Program entry point at 0x%x, size = 0x%x.\n", hart_id, prog_1, size);
             printf("-----------------------------------------------------------------------\n");
-            release();
             *prog_ready = LOCK_0;
-            // while(*prog_ready != LOCK_1);
-            acquire();
-            printf("prog_done\n");
-            release();
-
+            while(*prog_ready != LOCK_1);
+            printf("===================== begin to run core 0 ===============================\n");
             // Call the entry point for execution.
             
             asm volatile ("fence.i"); // force flushing of I/D caches.
             asm volatile ("lui t0, %hi(prog_1)");
             asm volatile ("lw ra, %lo(prog_1)(t0)");
             asm volatile ("jalr ra, ra, 0");
-            *done_0 = DONE_0;
         }
         else
         {
-            // should be 0x7F454C46
-            acquire();
             printf("\n\nMagic number = 0x%X\n", *((uint32_t *) ehdr->e_ident));
             printf("Error! Not an ELF file.\n\n");
-            release();
         }
-        // *done_0 = DONE_0;
+        *done_0 = DONE_0;
     }
     else {
-        while (1);
-        {
-            /* code */
-        }
         
-        // *done_1 = 0;
-        // acquire();
-        // printf("Core %d waiting Core 0 ready...\n", hart_id);
-        // release();
+        *done_1 = 0;
+        acquire();
+        printf("Core %d waiting Core 0 ready...\n", hart_id);
+        release();
 
-        // while(*prog_ready != LOCK_0);
-        // acquire();
-        // printf("Core %d is waiting for a program to be sent from the UART ...\n", hart_id);
-        // release();
-        // // Read the ELF header.
-        // for (idx = 0; idx < hsize; idx++)
-        // {
-        //     eheader[idx] = inbyte();
-        //     acquire();
-        //     printf("Received byte %d: 0x%X\n", idx, eheader[idx]);
-        //     release();
+        while(*prog_ready != LOCK_0);
+        printf("Core %d is waiting for a program to be sent from the UART ...\n", hart_id);
+        
+        // Read the ELF header.
+        for (idx = 0; idx < hsize; idx++)
+        {
+            eheader[idx] = inbyte();
+        }
 
-        // }
-
-        // if (*((uint32_t *) ehdr->e_ident) == *magic)
-        // {
-        //     prog_2 = (uint8_t *) ehdr->e_entry; // set program entry point 
-        //     size = ehdr->e_shoff + (ehdr->e_shentsize * ehdr->e_shnum);
-        //     load_elf(ehdr);
-        //     acquire();
-        //     printf("[Aquila core %d] Load Done!\n", hart_id);
-        //     printf("[Aquila core %d] Program entry point at 0x%x, size = 0x%x.\n", hart_id, prog_2, size);
-        //     printf("-----------------------------------------------------------------------\n");
-        //     release();
-        //     *prog_ready = LOCK_1;
-        //     acquire();
-        //     printf("lock=0x%X\n", *prog_ready);
-        //     release();
-        //     // Call the entry point for execution.
-        //     asm volatile ("fence.i"); // force flushing of I/D caches.
-        //     asm volatile ("lui t0, %hi(prog_2)");
-        //     asm volatile ("lw ra, %lo(prog_2)(t0)");
-        //     asm volatile ("jalr ra, ra, 0");
-        //     *done_1 = DONE_1;
-        // }
-        // else
-        // {
-        //     acquire();
-        //     printf("\n\nMagic number = 0x%X\n", *((uint32_t *) ehdr->e_ident));
-        //     printf("Error! Not an ELF file.\n\n");
-        //     release();
-        // }
-        // *done_1 = DONE_1;
+        if (*((uint32_t *) ehdr->e_ident) == *magic)
+        {
+            prog_2 = (uint8_t *) ehdr->e_entry; // set program entry point 
+            size = ehdr->e_shoff + (ehdr->e_shentsize * ehdr->e_shnum);
+            load_elf(ehdr);
+            printf("[Aquila core %d] Load Done!\n", hart_id);
+            printf("[Aquila core %d] Program entry point at 0x%x, size = 0x%x.\n", hart_id, prog_2, size);
+            printf("-----------------------------------------------------------------------\n");
+            *prog_ready = LOCK_1;
+            printf("===================== begin to run core 1 ===============================\n");
+            // Call the entry point for execution.
+            asm volatile ("fence.i"); // force flushing of I/D caches.
+            asm volatile ("lui t0, %hi(prog_2)");
+            asm volatile ("lw ra, %lo(prog_2)(t0)");
+            asm volatile ("jalr ra, ra, 0");
+            // *done_1 = DONE_1;
+        }
+        else
+        {
+            printf("\n\nMagic number = 0x%X\n", *((uint32_t *) ehdr->e_ident));
+            printf("Error! Not an ELF file.\n\n");
+        }
+        *done_1 = DONE_1;
     }
-    // while(*done_0 != DONE_0 || *done_1 != DONE_1){
-    // }
+    while(*done_0 != DONE_0 || *done_1 != DONE_1);
     // Halt the processor.
     if(hart_id == 0) {
         exit(0);
     }
     else {
-        while(1){
-        }
+        while(1);
     }
+
     return 0;
 }
 
@@ -311,8 +280,17 @@ int load_elf(Elf32_Ehdr *ehdr)
     }
 
     remain = inbyte(); 
-    while(remain != 0xFF){
-        inbyte();
+    int count = 0;
+    while(1){
+        if(remain == 0xff){
+            count ++;
+        }
+        else{
+            count = 0;
+        }
+        if(count == 9){
+            break;
+        }
         remain = inbyte();
     }
 

@@ -100,5 +100,5 @@
 `define Monitor 1
 
 // SIM_FNAME defines the RISC-V program path of an ELF file for simulation.
-`define SIM_FNAME_0 "/home/henry7090/Desktop/Project/New/coremark_2core/CoreMark/coremark.elf"
-`define SIM_FNAME_1 "/home/henry7090/Desktop/Project/New/coremark_2core/CoreMark2/coremark.elf"
+`define SIM_FNAME_0 "/home/henry7090/Desktop/Project/aquila_mp_sw/ocr_2core/ocr_0.elf"
+`define SIM_FNAME_1 "/home/henry7090/Desktop/Project/aquila_mp_sw/ocr_2core/ocr_1.elf"

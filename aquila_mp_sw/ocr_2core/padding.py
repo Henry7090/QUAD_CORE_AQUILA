@@ -9,7 +9,15 @@ for filename in elf_files:
     with open(filename, 'rb') as f:
         elf_data = f.read()
     
-    elf_data += b'\xFF'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
+    elf_data += b'\xff'
     
     with open(filename, 'wb') as f:
         f.write(elf_data)

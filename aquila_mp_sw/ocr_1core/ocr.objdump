@@ -1,8 +1,8 @@
 
-ocr.elf      檔案格式 elf32-littleriscv
+ocr.elf:     file format elf32-littleriscv
 
 
-.text 區段的反組譯：
+Disassembly of section .text:
 
 80001000 <main>:
 80001000:	80012537          	lui	a0,0x80012

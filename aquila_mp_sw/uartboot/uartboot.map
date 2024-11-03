@@ -12,32 +12,32 @@ Linker script and memory map
 
                 0x00000300                        __stack_size = 0x300
 
-.text           0x00000000      0x710
+.text           0x00000000      0x720
  boot.o(.text)
  .text          0x00000000       0x34 boot.o
                 0x00000000                boot
  *(.text)
- .text          0x00000034      0x1cc uartboot.o
+ .text          0x00000034      0x1dc uartboot.o
                 0x0000006c                load_elf
- .text          0x00000200      0x510 io_uart.o
-                0x00000200                exit
-                0x00000244                inbyte
-                0x0000026c                outbyte
-                0x000002b0                getchar
-                0x000002d8                putchar
-                0x00000324                putd
-                0x000003ec                putx
-                0x0000047c                puts
-                0x00000500                printf
+ .text          0x00000210      0x510 io_uart.o
+                0x00000210                exit
+                0x00000254                inbyte
+                0x0000027c                outbyte
+                0x000002c0                getchar
+                0x000002e8                putchar
+                0x00000334                putd
+                0x000003fc                putx
+                0x0000048c                puts
+                0x00000510                printf
 
-.text.startup   0x00000710      0x1c8
- .text.startup  0x00000710      0x1c8 uartboot.o
-                0x00000710                main
+.text.startup   0x00000720      0x324
+ .text.startup  0x00000720      0x324 uartboot.o
+                0x00000720                main
 
-.rela.dyn       0x000008d8        0x0
- .rela.sdata    0x000008d8        0x0 boot.o
+.rela.dyn       0x00000a44        0x0
+ .rela.sdata    0x00000a44        0x0 boot.o
 
-.data           0x00002000      0x341
+.data           0x00002000      0x3f1
  *(.data)
  .data          0x00002000        0x0 boot.o
  .data          0x00002000        0x0 uartboot.o
@@ -49,35 +49,35 @@ Linker script and memory map
                 0x00002080                eheader
  .bss           0x000020c0        0x0 io_uart.o
  *(.rodata*)
- .rodata        0x000020c0      0x1c7 uartboot.o
- *fill*         0x00002287        0x1 
- .rodata        0x00002288       0xb9 io_uart.o
+ .rodata        0x000020c0      0x277 uartboot.o
+ *fill*         0x00002337        0x1 
+ .rodata        0x00002338       0xb9 io_uart.o
 
-.sdata          0x00002344       0x24
- .sdata         0x00002344        0x4 boot.o
-                0x00002344                stack_top
- .sdata         0x00002348       0x14 uartboot.o
-                0x00002348                year
-                0x0000234c                organization
-                0x00002350                done_1
-                0x00002354                done_0
-                0x00002358                print_lock
- .sdata         0x0000235c        0xc io_uart.o
-                0x0000235c                uart_status
-                0x00002360                uart_txfifo
-                0x00002364                uart_rxfifo
+.sdata          0x000023f4       0x24
+ .sdata         0x000023f4        0x4 boot.o
+                0x000023f4                stack_top
+ .sdata         0x000023f8       0x14 uartboot.o
+                0x000023f8                year
+                0x000023fc                organization
+                0x00002400                done_1
+                0x00002404                done_0
+                0x00002408                print_lock
+ .sdata         0x0000240c        0xc io_uart.o
+                0x0000240c                uart_status
+                0x00002410                uart_txfifo
+                0x00002414                uart_rxfifo
 
-.sbss           0x00002368        0xc
- .sbss          0x00002368        0x4 boot.o
-                0x00002368                sp_store
- .sbss          0x0000236c        0x8 uartboot.o
-                0x0000236c                prog_2
-                0x00002370                prog_1
+.sbss           0x00002418        0xc
+ .sbss          0x00002418        0x4 boot.o
+                0x00002418                sp_store
+ .sbss          0x0000241c        0x8 uartboot.o
+                0x0000241c                prog_2
+                0x00002420                prog_1
 
-.stack          0x00002380      0x300
-                0x00002680                        . = (. + __stack_size)
- *fill*         0x00002380      0x300 
-                0x00002680                        __stack_top = .
+.stack          0x00002430      0x300
+                0x00002730                        . = (. + __stack_size)
+ *fill*         0x00002430      0x300 
+                0x00002730                        __stack_top = .
 LOAD boot.o
 LOAD uartboot.o
 LOAD io_uart.o

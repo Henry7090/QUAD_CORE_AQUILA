@@ -5,7 +5,7 @@
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7a100t_0" gui_info=""/>
+  <device name="xc7a100t_0" gui_info="dashboard1=hw_ila_1[xc7a100t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a100t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a100t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a100t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a100t_0/hw_ila_1/Waveform=ILA_WAVE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a100t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/soc_top.ltx"/>
@@ -32,6 +32,7 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="genblk1[0].Aquila_SoC/I_Cache/p_addr_i[31:0]" gui_info="Trigger Setup=0"/>
     <Object name="genblk1[0].Aquila_SoC/I_Cache/p_data_o[31:0]" gui_info=""/>
+    <Object name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[31:0]" gui_info=""/>
     <Object name="genblk3[0].synchronizer/P_wt_data_o[127:0]" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
@@ -379,6 +380,110 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[31]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[30]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[29]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[28]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[27]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[26]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[25]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[24]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[23]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[22]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[21]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[20]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[19]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[18]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[17]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[16]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[15]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[14]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[13]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[12]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[11]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[10]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[9]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[8]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[7]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[6]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[5]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[4]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[3]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[2]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[1]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_instr2dec[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[31]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[30]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[29]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[28]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[27]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[26]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[25]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[24]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[23]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[22]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[21]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[20]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[19]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[18]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[17]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[16]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[15]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[14]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[13]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[12]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[11]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[10]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[9]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[8]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[7]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[6]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[5]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[4]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[3]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[2]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[1]"/>
+        <net name="genblk1[0].Aquila_SoC/RISCV_CORE/fet_pc2dec[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
@@ -607,6 +712,110 @@
       </probeOptions>
       <nets>
         <net name="genblk1[0].Aquila_SoC/n_0_3"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[31]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[30]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[29]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[28]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[27]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[26]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[25]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[24]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[23]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[22]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[21]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[20]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[19]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[18]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[17]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[16]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[15]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[14]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[13]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[12]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[11]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[10]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[9]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[8]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[7]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[6]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[5]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[4]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[3]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[2]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[1]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_instr2dec[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[31]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[30]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[29]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[28]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[27]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[26]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[25]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[24]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[23]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[22]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[21]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[20]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[19]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[18]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[17]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[16]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[15]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[14]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[13]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[12]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[11]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[10]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[9]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[8]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[7]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[6]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[5]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[4]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[3]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[2]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[1]"/>
+        <net name="genblk1[1].Aquila_SoC/RISCV_CORE/fet_pc2dec[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">

@@ -123,7 +123,7 @@ module core_top #(
 // ------------------------------
 //  Fetch stage output signals
 // ------------------------------
-wire [XLEN-1 : 0] fet_instr2dec, fet_pc2dec;
+(* mark_debug = "true" *) wire [XLEN-1 : 0] fet_instr2dec, fet_pc2dec;
 wire              fet_branch_hit, fet_branch_decision;
 
 wire              fet_valid2dec;

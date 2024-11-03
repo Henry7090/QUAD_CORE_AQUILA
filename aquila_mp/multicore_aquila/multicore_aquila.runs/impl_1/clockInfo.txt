@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1
-| Date         : Sat Oct  5 14:44:09 2024
+| Date         : Sat Nov  2 23:20:56 2024
 | Host         : henry7090-ROG-Zephyrus-G16
 | Design       : design_1
 | Device       : xc7a100t-csg324-1--

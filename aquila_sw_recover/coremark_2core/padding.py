@@ -11,6 +11,14 @@ for filepath in elf_paths:
 
         # 加上 b'\xFF'
         elf_data += b'\xFF'
+        elf_data += b'\xFF'
+        elf_data += b'\xFF'
+        elf_data += b'\xFF'
+        elf_data += b'\xFF'
+        elf_data += b'\xFF'
+        elf_data += b'\xFF'
+        elf_data += b'\xFF'
+        elf_data += b'\xFF'
 
         # 將修改後的 ELF 資料寫回原檔案
         with open(filepath, 'wb') as f:

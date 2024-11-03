@@ -1,5 +1,5 @@
 cat CoreMark/coremark.elf > /dev/ttyUSB1
 
-# sleep 25
+sleep 2
 
-# cat CoreMark2/coremark.elf > /dev/ttyUSB1
+cat CoreMark2/coremark.elf > /dev/ttyUSB1
