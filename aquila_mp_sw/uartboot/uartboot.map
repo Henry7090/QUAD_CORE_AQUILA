@@ -12,30 +12,30 @@ Linker script and memory map
 
                 0x00000300                        __stack_size = 0x300
 
-.text           0x00000000      0x720
+.text           0x00000000      0x6f4
  boot.o(.text)
  .text          0x00000000       0x34 boot.o
                 0x00000000                boot
  *(.text)
- .text          0x00000034      0x1dc uartboot.o
+ .text          0x00000034      0x1b0 uartboot.o
                 0x0000006c                load_elf
- .text          0x00000210      0x510 io_uart.o
-                0x00000210                exit
-                0x00000254                inbyte
-                0x0000027c                outbyte
-                0x000002c0                getchar
-                0x000002e8                putchar
-                0x00000334                putd
-                0x000003fc                putx
-                0x0000048c                puts
-                0x00000510                printf
+ .text          0x000001e4      0x510 io_uart.o
+                0x000001e4                exit
+                0x00000228                inbyte
+                0x00000250                outbyte
+                0x00000294                getchar
+                0x000002bc                putchar
+                0x00000308                putd
+                0x000003d0                putx
+                0x00000460                puts
+                0x000004e4                printf
 
-.text.startup   0x00000720      0x320
- .text.startup  0x00000720      0x320 uartboot.o
-                0x00000720                main
+.text.startup   0x000006f4      0x31c
+ .text.startup  0x000006f4      0x31c uartboot.o
+                0x000006f4                main
 
-.rela.dyn       0x00000a40        0x0
- .rela.sdata    0x00000a40        0x0 boot.o
+.rela.dyn       0x00000a10        0x0
+ .rela.sdata    0x00000a10        0x0 boot.o
 
 .data           0x00002000      0x3f1
  *(.data)
@@ -45,8 +45,8 @@ Linker script and memory map
  *(.bss)
  .bss           0x00002000        0x0 boot.o
  .bss           0x00002000       0xc0 uartboot.o
-                0x00002000                pheader
-                0x00002080                eheader
+                0x00002000                eheader
+                0x00002040                pheader
  .bss           0x000020c0        0x0 io_uart.o
  *(.rodata*)
  .rodata        0x000020c0      0x277 uartboot.o

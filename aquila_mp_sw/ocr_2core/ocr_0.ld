@@ -59,12 +59,6 @@ __heap_size  = 0x200000;
 
 MEMORY
 {
-    /*code_ram         (rx!rw) : ORIGIN = 0x80001000, LENGTH = 0x10000
-    rodata_ram       (rw!x)  : ORIGIN = 0x80021000, LENGTH = 0x30000
-    global_data_ram  (rw!x)  : ORIGIN = 0x80081000, LENGTH = 0x10000
-    heap_data_ram    (rw!x)  : ORIGIN = 0x80091000, LENGTH = 0x210000
-    private_data_ram (rw!x)  : ORIGIN = 0x80301000, LENGTH = 0x210000*/
-    
     code_ram         (rx!rw) : ORIGIN = 0x80001000, LENGTH = 0x50000
     rodata_ram       (rw!x)  : ORIGIN = 0x80051000, LENGTH = 0x50000
     global_data_ram  (rw!x)  : ORIGIN = 0x80151000, LENGTH = 0x10000
@@ -74,33 +68,39 @@ MEMORY
 
 ENTRY(crt0)
 
+PHDRS
+{
+    text PT_LOAD FLAGS(5);
+    data PT_LOAD FLAGS(6);
+}
+
 SECTIONS
 {
     .text :
     {
         *(.text*)
-    } > code_ram
+    } > code_ram :text
 
-    .rodata :  
+    .rodata :
     {
         *(.rodata*)
-    } > rodata_ram
+    } > rodata_ram :text
 
     .data :
     {
         *(.data)
         *(.bss)
-    } > global_data_ram
+    } > global_data_ram :data
 
     .heap : ALIGN(0x10)
     {
         __heap_start = .;
         . += __heap_size;
-    } > heap_data_ram
+    } > heap_data_ram :data
 
     .stack : ALIGN(0x10)
     {
         . += __stack_size;
         __stack_top = .;
-    } > private_data_ram
+    } > private_data_ram :data
 }

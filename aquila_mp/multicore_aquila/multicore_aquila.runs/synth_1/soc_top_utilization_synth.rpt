@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Sun Nov  3 15:50:13 2024
+| Date         : Mon Nov  4 19:06:12 2024
 | Host         : henry7090-ROG-Zephyrus-G16 running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file soc_top_utilization_synth.rpt -pb soc_top_utilization_synth.pb
 | Design       : soc_top

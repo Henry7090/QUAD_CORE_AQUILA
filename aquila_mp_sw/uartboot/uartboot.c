@@ -169,8 +169,9 @@ int main(void)
             printf("-----------------------------------------------------------------------\n");
             *prog_ready = LOCK_0;
             while(*prog_ready != LOCK_1);
-            *prog_ready = LOCK_0;
+            acquire();
             printf("===================== begin to run core 0 ===============================\n");
+            release();
             // Call the entry point for execution.
             
             asm volatile ("fence.i"); // force flushing of I/D caches.
@@ -210,7 +211,9 @@ int main(void)
             printf("[Aquila core %d] Program entry point at 0x%x, size = 0x%x.\n", hart_id, prog_2, size);
             printf("-----------------------------------------------------------------------\n");
             *prog_ready = LOCK_1;
+            acquire();
             printf("===================== begin to run core 1 ===============================\n");
+            release();
             // Call the entry point for execution.
             asm volatile ("fence.i"); // force flushing of I/D caches.
             asm volatile ("lui t0, %hi(prog_2)");
@@ -239,62 +242,81 @@ int main(void)
 
 int load_elf(Elf32_Ehdr *ehdr)
 {
-    Elf32_Phdr *phdr = (Elf32_Phdr *) pheader;
     uint32_t hsize = sizeof(Elf32_Ehdr);
-    uint32_t skip, current_byte;
-    uint32_t *mem;
-    uint8_t  *dst_addr;
-    uint8_t  remain;
+    uint32_t phdr_size = ehdr->e_phentsize * ehdr->e_phnum;
+    uint32_t current_byte = hsize;
+    uint32_t skip;
+    uint8_t *dst_addr;
     int idx, jdx;
+    int has_load = 0;
 
-    // Read the Program headers.
-    current_byte = hsize;
-    
-    for (idx = 0; idx < ehdr->e_phentsize*ehdr->e_phnum; idx++)
+    // 分配缓冲区来读取程序头
+    uint8_t phdr_buffer[phdr_size];
+
+    // 读取程序头到缓冲区
+    for (idx = 0; idx < phdr_size; idx++)
     {
-        pheader[idx] = inbyte();
+        phdr_buffer[idx] = inbyte();
         current_byte++;
     }
-    
-    // Load CODE and DATA sections into the target addresses.
+
+    // 将缓冲区转换为 Elf32_Phdr 数组
+    Elf32_Phdr *phdr = (Elf32_Phdr *)phdr_buffer;
+
+    // 加载可执行段和数据段到目标地址
     for (idx = 0; idx < ehdr->e_phnum; idx++)
     {
-        if (phdr[idx].p_type == PT_LOAD && phdr[idx].p_filesz != 0)
+        if (phdr[idx].p_type == PT_LOAD)
         {
-            dst_addr = (uint8_t *) phdr[idx].p_paddr;
-            skip = phdr[idx].p_offset - current_byte;
-            while (skip-- > 0) inbyte(), current_byte++;
+            dst_addr = (uint8_t *)phdr[idx].p_paddr;
 
+            // 跳过未读取的字节
+            skip = phdr[idx].p_offset - current_byte;
+            while (skip-- > 0)
+            {
+                inbyte();
+                current_byte++;
+            }
+
+            // 从输入中读取段数据
             for (jdx = 0; jdx < phdr[idx].p_filesz; jdx++)
             {
                 dst_addr[jdx] = inbyte();
                 current_byte++;
             }
-            mem = (uint32_t *) &(dst_addr[jdx]);
-            while (jdx < phdr[idx].p_memsz)
+
+            // 如果 p_memsz > p_filesz，需要将剩余部分置零
+            for (; jdx < phdr[idx].p_memsz; jdx++)
             {
-                mem[(jdx>>2)] = 0;
-                jdx += sizeof(int);
+                dst_addr[jdx] = 0;
             }
+
+            has_load++;
         }
-        
     }
 
-    remain = inbyte(); 
-    int count = 0;
-    while(1){
-        if(remain == 0xff){
-            count ++;
-        }
-        else{
-            count = 0;
-        }
-        if(count == 9){
-            break;
-        }
-        remain = inbyte();
-    }
+    // 读取剩余的字节，直到连续读取到 9 个 0xFF
+    // int count = 0;
+    // while (1)
+    // {
+    //     uint8_t remain = inbyte();
+
+    //     if (remain == 0xFF)
+    //     {
+    //         count++;
+    //         if (count == 9)
+    //         {
+    //             acquire();
+    //             printf("Load completed. Total segments loaded: %d\n", has_load);
+    //             release();
+    //             break;
+    //         }
+    //     }
+    //     else
+    //     {
+    //         count = 0;
+    //     }
+    // }
 
     return 0;
 }
-
