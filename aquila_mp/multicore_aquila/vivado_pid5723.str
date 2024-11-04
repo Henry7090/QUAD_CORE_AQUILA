@@ -687,3 +687,40 @@ dismissDialog("Program Device"); // bj (Program Device Progress)
 // TclEventType: WAVEFORM_MODEL_EVENT
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: HW_OBJECT_DELETE
+// Elapsed time: 642 seconds
+closeView(PAResourceOtoP.PAViews_DASHBOARD, "hw_ila_1"); // d (PAResourceOtoP.PAViews_DASHBOARD, PlanAheadTabhw_ila_1)
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210319AFEE24A 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+dismissDialog("Close Hardware Target"); // j.a (dialog13)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,160 MB. GUI used memory: 203 MB. Current time: 11/4/24, 7:58:27 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,146 MB. GUI used memory: 185 MB. Current time: 11/4/24, 8:28:27 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,055 MB. GUI used memory: 182 MB. Current time: 11/4/24, 8:58:27 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,035 MB. GUI used memory: 182 MB. Current time: 11/4/24, 9:28:27 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:30m:34s
+// Elapsed Time for: 'L.f': 02h:30m:36s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:31m:36s
+// Elapsed Time for: 'L.f': 02h:31m:38s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:32m:32s
+// Elapsed Time for: 'L.f': 02h:32m:34s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'L.f': 02h:32m:36s
+// Elapsed Time for: 'L.f': 02h:32m:38s
