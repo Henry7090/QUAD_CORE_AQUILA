@@ -1,1 +1,0 @@
-/tools/Xilinx/Vivado/2024.1/bin/vivado multicore_aquila.xpr

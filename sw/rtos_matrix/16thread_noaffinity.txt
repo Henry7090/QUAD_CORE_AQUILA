@@ -1,0 +1,109 @@
+=======================================================================
+Copyright (c) 2019-2023, EISL@NYCU, Hsinchu, Taiwan.
+The Aquila SoC is ready.
+-----------------------------------------------------------------------
+Core 0 is waiting for a program to be sent from the UART ...
+[Aquila core 0] Load Done!
+[Aquila core 0] Program entry point at 0x80002A08, size = 0x279B8.
+-----------------------------------------------------------------------
+Core 0: Initializing...
+Core 0: Creating tasks for a single run...
+[Coordinator] Task started on Core 0. Starting run.
+[Worker_11] (id=11) started on Core 1
+[Worker_12] (id=12) started on Core 2
+[Worker_13] (id=13) started on Core 3
+[Worker_9] (id=9) started on Core 0
+[Worker_8] (id=8) started on Core 0
+[Worker_14] (id=14) started on Core 1
+[Worker_15] (id=15) started on Core 2
+[Worker_0] (id=0) started on Core 3
+[Worker_1] (id=1) started on Core 1
+[Worker_2] (id=2) started on Core 2
+[Worker_3] (id=3) started on Core 3
+[Worker_4] (id=4) started on Core 1
+[Worker_5] (id=5) started on Core 2
+[Worker_6] (id=6) started on Core 3
+[Worker_7] (id=7) started on Core 1
+[Worker_10] (id=10) started on Core 2
+
+----------------------------------------
+[Coordinator] Compute complete.
+It took 7801 ms to multiply two 64 x 64 matrices 100 times.
+
+----------------------------------------
+
+================= Profile Summary (All Cores) =================
+>>> Per-Core Counter
+Core |    I2M    I2E    I2S    S2M    M2R    E2R
+-----+---------------------------------------------
+   0 |  229630  193978  416035   63205  236012  183645
+   1 |  148391  192227  479025   92395  151458  178643
+   2 |  144946  226560  496822  104365  143339  217594
+   3 |  141389  129599  455411  102042  147016  124601
+==============================================================
+
+>>> Per-Core Weighted Average Latency (cycles)
+Core |     I2M           I2E           I2S           S2M           M2R           E2R
+-----+---------------------------------------------------------------------------------
+   0 | 25.158947 7.308731 7.202247 3.960335 6.214523 6.237338
+   1 | 7.968489 7.569884 7.283010 2.029341 6.389930 6.352709
+   2 | 8.107495 7.502194 7.365781 2.137220 6.386461 6.331861
+   3 | 8.203538 7.949205 7.497015 15.655769 6.402650 6.393159
+=================================================================================
+
+>>> Counter Sum (All Cores)
+      I2M      I2E      I2S      S2M      M2R      E2R
+------------------------------------------------------------
+Sum |  664356  742364 1847293  362007  677825  704483
+
+>>> Weighted Average Latency (All Cores)
+      I2M           I2E           I2S           S2M           M2R           E2R
+------------------------------------------------------------
+Avg | 13.990601 7.547207 7.339841 6.238584 6.330880 6.323349
+=================================================================================
+>>> Per-Core Data Cache Write Miss Rate
+---------------------------------------------------------------------------------
+ Core  0 | 2.802532 %
+ Core  1 | 2.071837 %
+ Core  2 | 2.119836 %
+ Core  3 | 2.056109 %
+=================================================================================
+>>> Overall Cache Write Miss Rate (All Cores)
+---------------------------------------------------------------------------------
+2.285359 %
+=================================================================================
+=================================================================================
+>>> Context Switch Overhead (ms)
+---------------------------------------------------------------------------------
+Core 0: 18.549000 ms,counter = 906
+Core 1: 19.743000 ms,counter = 926
+Core 2: 27.971000 ms,counter = 925
+Core 3: 39.305000 ms,counter = 925
+---------------------------------------------------------------------------------
+Total latency: 105.568000 ms
+Total time: 3686
+=================================================================================
+================================================
+barrier overhead:
+worker 1085958798: overhead=6762.555000
+worker 1085893029: overhead=6505.646000
+worker 1085925186: overhead=6631.261000
+worker 1085880986: overhead=6458.604000
+worker 1085798186: overhead=6135.167000
+worker 1085922758: overhead=6621.775000
+worker 1085896022: overhead=6517.338000
+worker 1085911419: overhead=6577.481000
+worker 1085951212: overhead=6732.922000
+worker 1085941520: overhead=6695.065000
+worker 1085889026: overhead=6490.010000
+worker 1085975492: overhead=6827.767000
+worker 1085941952: overhead=6696.751000
+worker 1085966914: overhead=6794.258000
+worker 1085912960: overhead=6583.500000
+worker 1085937418: overhead=6679.041000
+=======================
+total barrier overhead=105709.141000
+ avg barier overhead per thread:6606.821312
+-----------------------------------------------------------------------
+Program exit with a status code 0
+Press <reset> on the FPGA board to reboot the cpu ...

@@ -1,0 +1,1 @@
+cat rtos_run.elf > /dev/ttyUSB0

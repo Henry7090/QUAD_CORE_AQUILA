@@ -1,0 +1,1 @@
+riscv32-unknown-elf-nm rtos_run.elf | grep 80072208
